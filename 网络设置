@@ -1,0 +1,22 @@
+ var networkState = navigator.connection.type;
+        var states = {};
+        states[Connection.UNKNOWN] = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI] = 'WiFi connection';
+        states[Connection.CELL_2G] = '网络较慢';
+        states[Connection.CELL_3G] = 'Cell 3G connection';
+        states[Connection.CELL_4G] = 'Cell 4G connection';
+        states[Connection.CELL] = 'Cell generic connection';
+        states[Connection.NONE] = '网络异常';
+        if (states[networkState] == "网络异常")
+        {
+            $cordovaToast.showShortCenter((states[networkState]));
+        }
+        else if (states[networkState] == "网络较慢")
+        {
+            $cordovaToast.showShortCenter((states[networkState]));
+        }
+        else
+        {
+            // alert("1111")  
+        }
